@@ -1,6 +1,6 @@
 <div align="center">
 
-![Liethueis Foundation](Preview-image.png)
+![Liethueis Foundation]<img src="preview-image.png" width="300" height="264"/>
 
 # Emily — Local Offline AI Agent
 
