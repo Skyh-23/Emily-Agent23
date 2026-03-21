@@ -190,7 +190,7 @@ emily/
 ## 🚀 Quick Start
 
 ```bash
-git clone https://github.com/HirenSumra/emily-agent
+git clone https://github.com/Skyh-23/Emily-Agent23
 cd emily-agent
 
 python -m venv venv
