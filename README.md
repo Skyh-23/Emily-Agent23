@@ -189,21 +189,52 @@ emily/
 
 ## 🚀 Quick Start
 
+### Step 1 — Prerequisites
+
+- [Python 3.10+](https://python.org/downloads)
+- [Ollama](https://ollama.com/download)
+- [Git](https://git-scm.com)
+
+### Step 2 — Clone & Install
 ```bash
 git clone https://github.com/Skyh-23/Emily-Agent23
-cd emily-agent
+cd Emily-Agent23
 
 python -m venv venv
 venv\Scripts\activate
 
 pip install -r requirements.txt
+```
 
+### Step 3 — Install eSpeak-NG (Required for Kokoro TTS)
+
+Download and install: [eSpeak-NG Releases](https://github.com/espeak-ng/espeak-ng/releases)
+→ Download `espeak-ng-X.X-x64.msi` and run it
+
+### Step 4 — Download Piper Voice Model
+
+Create folder `piper_models/` in project root, then download these 2 files into it:
+
+- [en_US-amy-medium.onnx](https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/amy/medium/en_US-amy-medium.onnx)
+- [en_US-amy-medium.onnx.json](https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/amy/medium/en_US-amy-medium.onnx.json)
+
+### Step 5 — Pull Ollama Model
+```bash
+# Open a new terminal window and run:
+ollama serve
+
+# In another terminal:
 ollama pull qwen3-coder:30b
+# OR lighter model:
+ollama pull llama3.2:3b
+```
 
+### Step 6 — Run Emily
+```bash
 python main.py
 ```
 
----
+> 💡 **Tip:** Keep `ollama serve` running in a separate terminal window always.
 
 ## 🤝 Why We're Applying for Claude API Access
 
