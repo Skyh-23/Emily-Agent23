@@ -1,0 +1,755 @@
+2026-03-16 14:22:22,991  audio_recorder      INFO     Silero VAD loaded
+2026-03-16 14:23:13,059  audio_recorder      WARNING  Calibration failed: Error opening InputStream: Unanticipated host error [PaErrorCode -9999]: 'Undefined external error.' [MME error 1]
+2026-03-16 14:23:14,482  huggingface_hub.file_download  WARNING  Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-03-16 14:27:14,232  speech_to_text      INFO     Whisper loaded: model=base.en device=cuda compute=float16
+2026-03-16 14:27:14,236  sentence_transformers.SentenceTransformer  INFO     Use pytorch device_name: cuda:0
+2026-03-16 14:27:14,238  sentence_transformers.SentenceTransformer  INFO     Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2026-03-16 14:27:26,965  huggingface_hub.file_download  WARNING  Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-03-16 14:30:50,763  rag_engine          INFO     SQLite vault initialized: vault.db
+2026-03-16 14:30:50,763  rag_engine          INFO     RAG engine ready: 0 chunks, model=BAAI/bge-small-en-v1.5
+2026-03-16 14:30:52,989  httpx               INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-16 14:30:52,989  llm_handler         INFO     Ollama connected: 7 models
+2026-03-16 14:30:52,989  llm_handler         INFO     Direct Ollama mode with model: qwen3-coder:30b
+2026-03-16 14:32:19,142  text_to_speech      INFO     Piper model downloaded: en_US-amy-medium
+2026-03-16 14:32:19,142  commands            INFO     Command executor initialized
+2026-03-16 14:32:19,142  __main__            INFO     Jarvis initialized: model=qwen3-coder:30b device=cuda
+2026-03-16 14:33:05,925  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 14:33:06,809  llm_handler         INFO     Ollama direct response: 67 chars
+2026-03-16 14:33:26,510  audio_recorder      INFO     Silero VAD loaded
+2026-03-16 14:33:31,332  audio_recorder      INFO     Selected audio device 14: 'Microphone Array (2- Realtek(R) Audio)' via Windows WASAPI
+2026-03-16 14:33:31,332  audio_recorder      WARNING  Calibration failed: Error opening InputStream: Invalid sample rate [PaErrorCode -9997]
+2026-03-16 14:33:32,375  speech_to_text      INFO     Whisper loaded: model=base.en device=cuda compute=float16
+2026-03-16 14:33:32,378  sentence_transformers.SentenceTransformer  INFO     Use pytorch device_name: cuda:0
+2026-03-16 14:33:32,378  sentence_transformers.SentenceTransformer  INFO     Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2026-03-16 14:33:37,160  rag_engine          INFO     SQLite vault initialized: vault.db
+2026-03-16 14:33:37,160  rag_engine          INFO     RAG engine ready: 0 chunks, model=BAAI/bge-small-en-v1.5
+2026-03-16 14:33:39,388  httpx               INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-16 14:33:39,388  llm_handler         INFO     Ollama connected: 7 models
+2026-03-16 14:33:44,035  llm_handler         INFO     Direct Ollama mode with model: qwen3-coder:30b
+2026-03-16 14:33:44,389  commands            INFO     Command executor initialized
+2026-03-16 14:33:44,393  __main__            INFO     Jarvis initialized: model=qwen3-coder:30b device=cuda
+2026-03-16 14:33:45,428  text_to_speech      ERROR    Piper TTS error: # channels not specified
+2026-03-16 14:41:40,510  audio_recorder      INFO     Silero VAD loaded
+2026-03-16 14:41:45,291  audio_recorder      INFO     Sample rate 16000 Hz works for device None
+2026-03-16 14:41:47,363  audio_recorder      INFO     Mic calibrated: rms=0.022489 threshold=0.015000 rate=16000
+2026-03-16 14:41:48,342  speech_to_text      INFO     Whisper loaded: model=base.en device=cuda compute=float16
+2026-03-16 14:41:48,348  sentence_transformers.SentenceTransformer  INFO     Use pytorch device_name: cuda:0
+2026-03-16 14:41:48,348  sentence_transformers.SentenceTransformer  INFO     Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2026-03-16 14:41:52,752  rag_engine          INFO     SQLite vault initialized: vault.db
+2026-03-16 14:41:52,752  rag_engine          INFO     RAG engine ready: 0 chunks, model=BAAI/bge-small-en-v1.5
+2026-03-16 14:41:54,985  httpx               INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-16 14:41:54,985  llm_handler         INFO     Ollama connected: 7 models
+2026-03-16 14:41:57,993  llm_handler         INFO     Direct Ollama mode with model: qwen3-coder:30b
+2026-03-16 14:41:58,298  commands            INFO     Command executor initialized
+2026-03-16 14:41:58,298  __main__            INFO     Jarvis initialized: model=qwen3-coder:30b device=cuda
+2026-03-16 14:41:59,288  text_to_speech      INFO     Piper TTS (Python): 1.0s
+2026-03-16 14:42:02,972  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 14:42:16,609  audio_recorder      INFO     Captured 1.3s with Silero VAD
+2026-03-16 14:42:16,796  faster_whisper      INFO     Processing audio with duration 00:01.312
+2026-03-16 14:42:16,928  faster_whisper      INFO     VAD filter removed 00:00.376 of audio
+2026-03-16 14:42:18,370  speech_to_text      INFO     STT: 'Bye.' (1.76s)
+2026-03-16 14:42:50,143  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 14:42:51,638  llm_handler         INFO     Ollama direct response: 115 chars
+2026-03-16 14:42:52,699  text_to_speech      INFO     Piper TTS (Python): 1.1s
+2026-03-16 14:42:54,271  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 14:43:10,154  audio_recorder      INFO     Captured 1.4s with Silero VAD
+2026-03-16 14:43:10,270  faster_whisper      INFO     Processing audio with duration 00:01.376
+2026-03-16 14:43:10,275  faster_whisper      INFO     VAD filter removed 00:00.472 of audio
+2026-03-16 14:43:10,570  speech_to_text      INFO     STT: 'I' (0.42s)
+2026-03-16 14:43:13,068  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 14:43:15,260  llm_handler         INFO     Ollama direct response: 109 chars
+2026-03-16 14:43:16,267  text_to_speech      INFO     Piper TTS (Python): 1.0s
+2026-03-16 14:43:19,993  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 14:43:33,628  audio_recorder      INFO     Captured 1.2s with Silero VAD
+2026-03-16 14:43:33,738  faster_whisper      INFO     Processing audio with duration 00:01.216
+2026-03-16 14:43:33,748  faster_whisper      INFO     VAD filter removed 00:00.376 of audio
+2026-03-16 14:43:34,148  speech_to_text      INFO     STT: 'Open.' (0.52s)
+2026-03-16 14:43:38,467  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 14:43:40,944  llm_handler         INFO     Ollama direct response: 219 chars
+2026-03-16 14:43:41,901  text_to_speech      INFO     Piper TTS (Python): 1.0s
+2026-03-16 14:43:42,221  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 14:43:50,435  text_to_speech      INFO     Piper TTS (Python): 0.9s
+2026-03-16 17:14:02,791  audio_recorder      INFO     Silero VAD loaded
+2026-03-16 17:14:31,426  audio_recorder      INFO     Sample rate 16000 Hz works for device None
+2026-03-16 17:14:33,700  audio_recorder      INFO     Mic calibrated: rms=0.011552 threshold=0.015000 rate=16000
+2026-03-16 17:14:35,059  huggingface_hub.file_download  WARNING  Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-03-16 17:20:29,148  speech_to_text      INFO     Whisper loaded: model=small.en device=cuda compute=float16
+2026-03-16 17:20:29,180  sentence_transformers.SentenceTransformer  INFO     Use pytorch device_name: cuda:0
+2026-03-16 17:20:29,180  sentence_transformers.SentenceTransformer  INFO     Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2026-03-16 17:20:34,257  rag_engine          INFO     SQLite vault initialized: vault.db
+2026-03-16 17:20:34,257  rag_engine          INFO     RAG engine ready: 0 chunks, model=BAAI/bge-small-en-v1.5
+2026-03-16 17:20:36,660  httpx               INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-16 17:20:36,661  llm_handler         INFO     Ollama connected: 7 models
+2026-03-16 17:20:52,441  llm_handler         INFO     Direct Ollama mode with model: qwen3-coder:30b
+2026-03-16 17:20:54,183  commands            INFO     Command executor initialized
+2026-03-16 17:20:54,183  __main__            INFO     Jarvis initialized: model=qwen3-coder:30b device=cuda
+2026-03-16 17:20:55,303  text_to_speech      INFO     Piper TTS (Python): 1.1s
+2026-03-16 17:20:55,313  text_to_speech      ERROR    Playback error: zero-size array to reduction operation maximum which has no identity
+2026-03-16 17:21:03,262  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 17:21:12,386  audio_recorder      INFO     Captured 2.0s with Silero VAD
+2026-03-16 17:21:12,540  faster_whisper      INFO     Processing audio with duration 00:02.016
+2026-03-16 17:21:12,653  faster_whisper      INFO     VAD filter removed 00:01.104 of audio
+2026-03-16 17:21:13,351  speech_to_text      INFO     STT: 'Bye!' (0.96s)
+2026-03-16 17:21:47,517  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 17:21:49,542  llm_handler         INFO     Ollama direct response: 126 chars
+2026-03-16 17:21:50,673  text_to_speech      INFO     Piper TTS (Python): 1.1s
+2026-03-16 17:21:50,673  text_to_speech      ERROR    Playback error: zero-size array to reduction operation maximum which has no identity
+2026-03-16 17:22:05,289  text_to_speech      INFO     Piper TTS (Python): 1.1s
+2026-03-16 17:22:05,291  text_to_speech      ERROR    Playback error: zero-size array to reduction operation maximum which has no identity
+2026-03-16 17:36:31,523  audio_recorder      INFO     Silero VAD loaded
+2026-03-16 17:37:15,943  audio_recorder      INFO     Sample rate 16000 Hz works for device None
+2026-03-16 17:37:18,186  audio_recorder      INFO     Mic calibrated: rms=0.000501 threshold=0.001002 rate=16000
+2026-03-16 17:37:19,941  speech_to_text      INFO     Whisper loaded: model=small.en device=cuda compute=float16
+2026-03-16 17:37:19,941  sentence_transformers.SentenceTransformer  INFO     Use pytorch device_name: cuda:0
+2026-03-16 17:37:19,941  sentence_transformers.SentenceTransformer  INFO     Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2026-03-16 17:37:24,531  rag_engine          INFO     SQLite vault initialized: vault.db
+2026-03-16 17:37:24,531  rag_engine          INFO     RAG engine ready: 0 chunks, model=BAAI/bge-small-en-v1.5
+2026-03-16 17:37:26,742  httpx               INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-16 17:37:26,742  llm_handler         INFO     Ollama connected: 7 models
+2026-03-16 17:37:35,641  llm_handler         INFO     Direct Ollama mode with model: james-dolphin2:latest
+2026-03-16 17:37:36,098  commands            INFO     Command executor initialized
+2026-03-16 17:37:36,098  __main__            INFO     Jarvis initialized: model=james-dolphin2:latest device=cuda
+2026-03-16 17:37:37,179  text_to_speech      ERROR    Piper TTS error: 'AudioChunk' object has no attribute 'audio_bytes'
+2026-03-16 17:37:39,470  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 17:37:54,279  audio_recorder      INFO     Captured 1.6s with Silero VAD
+2026-03-16 17:37:54,296  speech_to_text      INFO     Audio amplified 12.2x
+2026-03-16 17:37:54,410  faster_whisper      INFO     Processing audio with duration 00:01.568
+2026-03-16 17:37:54,495  faster_whisper      INFO     VAD filter removed 00:00.752 of audio
+2026-03-16 17:37:55,043  speech_to_text      INFO     STT: 'Mm-hmm.' (0.76s)
+2026-03-16 17:38:17,025  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 17:38:18,752  llm_handler         INFO     Ollama direct response: 143 chars
+2026-03-16 17:38:19,913  text_to_speech      ERROR    Piper TTS error: 'AudioChunk' object has no attribute 'audio_bytes'
+2026-03-16 17:38:22,204  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 17:38:36,977  audio_recorder      INFO     Captured 2.2s with Silero VAD
+2026-03-16 17:38:37,093  faster_whisper      INFO     Processing audio with duration 00:02.240
+2026-03-16 17:38:37,103  faster_whisper      INFO     VAD filter removed 00:01.168 of audio
+2026-03-16 17:38:37,578  speech_to_text      INFO     STT: 'Bye.' (0.60s)
+2026-03-16 17:38:39,899  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 17:38:40,828  llm_handler         INFO     Ollama direct response: 67 chars
+2026-03-16 17:38:41,803  text_to_speech      ERROR    Piper TTS error: 'AudioChunk' object has no attribute 'audio_bytes'
+2026-03-16 17:38:43,578  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 17:38:59,098  audio_recorder      INFO     Captured 3.6s with Silero VAD
+2026-03-16 17:38:59,110  speech_to_text      INFO     Audio amplified 1.8x
+2026-03-16 17:38:59,222  faster_whisper      INFO     Processing audio with duration 00:03.552
+2026-03-16 17:38:59,239  faster_whisper      INFO     VAD filter removed 00:01.168 of audio
+2026-03-16 17:38:59,798  speech_to_text      INFO     STT: 'What is the capital of India?' (0.70s)
+2026-03-16 17:39:02,195  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 17:39:04,657  llm_handler         INFO     Ollama direct response: 205 chars
+2026-03-16 17:39:05,735  text_to_speech      ERROR    Piper TTS error: 'AudioChunk' object has no attribute 'audio_bytes'
+2026-03-16 17:39:08,342  text_to_speech      ERROR    Piper TTS error: 'AudioChunk' object has no attribute 'audio_bytes'
+2026-03-16 17:43:24,418  audio_recorder      INFO     Silero VAD loaded
+2026-03-16 17:43:28,491  audio_recorder      INFO     Sample rate 16000 Hz works for device None
+2026-03-16 17:43:31,108  audio_recorder      INFO     Mic calibrated: rms=0.000015 threshold=0.000500 rate=16000
+2026-03-16 17:43:32,382  speech_to_text      INFO     Whisper loaded: model=small.en device=cuda compute=float16
+2026-03-16 17:43:32,386  sentence_transformers.SentenceTransformer  INFO     Use pytorch device_name: cuda:0
+2026-03-16 17:43:32,386  sentence_transformers.SentenceTransformer  INFO     Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2026-03-16 17:43:36,740  rag_engine          INFO     SQLite vault initialized: vault.db
+2026-03-16 17:43:36,741  rag_engine          INFO     RAG engine ready: 0 chunks, model=BAAI/bge-small-en-v1.5
+2026-03-16 17:43:38,959  httpx               INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-16 17:43:38,959  llm_handler         INFO     Ollama connected: 7 models
+2026-03-16 17:43:42,853  llm_handler         INFO     Direct Ollama mode with model: james-dolphin2:latest
+2026-03-16 17:43:43,169  commands            INFO     Command executor initialized
+2026-03-16 17:43:43,169  __main__            INFO     Jarvis initialized: model=james-dolphin2:latest device=cuda
+2026-03-16 17:43:44,304  text_to_speech      INFO     Piper TTS (Python): 1.1s
+2026-03-16 17:43:51,393  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 17:44:06,184  audio_recorder      INFO     Captured 3.4s with Silero VAD
+2026-03-16 17:44:06,303  faster_whisper      INFO     Processing audio with duration 00:03.360
+2026-03-16 17:44:06,399  faster_whisper      INFO     VAD filter removed 00:01.136 of audio
+2026-03-16 17:44:06,742  speech_to_text      INFO     STT: 'the capital of the Indian' (0.56s)
+2026-03-16 17:44:11,735  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 17:44:12,150  llm_handler         INFO     Ollama direct response: 34 chars
+2026-03-16 17:44:13,215  text_to_speech      INFO     Piper TTS (Python): 1.1s
+2026-03-16 17:45:51,926  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 17:45:59,945  audio_recorder      INFO     Captured 4.4s with Silero VAD
+2026-03-16 17:45:59,962  speech_to_text      INFO     Audio amplified 1.8x
+2026-03-16 17:46:00,093  faster_whisper      INFO     Processing audio with duration 00:04.352
+2026-03-16 17:46:00,113  faster_whisper      INFO     VAD filter removed 00:01.840 of audio
+2026-03-16 17:46:00,655  speech_to_text      INFO     STT: 'Who is the CEO of YouTube?' (0.71s)
+2026-03-16 17:46:03,094  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 17:46:03,809  llm_handler         INFO     Ollama direct response: 45 chars
+2026-03-16 17:46:04,887  text_to_speech      INFO     Piper TTS (Python): 1.1s
+2026-03-16 17:46:48,132  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 17:47:00,685  audio_recorder      INFO     Captured 2.7s with Silero VAD
+2026-03-16 17:47:00,709  speech_to_text      INFO     Audio amplified 1.9x
+2026-03-16 17:47:00,825  faster_whisper      INFO     Processing audio with duration 00:02.656
+2026-03-16 17:47:00,837  faster_whisper      INFO     VAD filter removed 00:01.168 of audio
+2026-03-16 17:47:01,235  speech_to_text      INFO     STT: 'Did you know Hindi?' (0.55s)
+2026-03-16 17:47:03,569  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 17:47:04,625  llm_handler         INFO     Ollama direct response: 83 chars
+2026-03-16 17:47:05,745  text_to_speech      INFO     Piper TTS (Python): 1.1s
+2026-03-16 17:47:37,270  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 17:47:45,943  audio_recorder      INFO     Captured 6.4s with Silero VAD
+2026-03-16 17:47:46,067  faster_whisper      INFO     Processing audio with duration 00:06.400
+2026-03-16 17:47:46,095  faster_whisper      INFO     VAD filter removed 00:00.560 of audio
+2026-03-16 17:47:46,667  speech_to_text      INFO     STT: 'So translate it into Hindi.  Today is holiday in our school.' (0.72s)
+2026-03-16 17:47:49,022  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 17:47:49,958  llm_handler         INFO     Ollama direct response: 29 chars
+2026-03-16 17:47:51,021  text_to_speech      INFO     Piper TTS (Python): 1.1s
+2026-03-16 17:48:06,248  text_to_speech      INFO     Piper TTS (Python): 1.1s
+2026-03-16 17:48:22,348  audio_recorder      INFO     Silero VAD loaded
+2026-03-16 17:48:26,092  audio_recorder      INFO     Sample rate 16000 Hz works for device None
+2026-03-16 17:48:28,687  audio_recorder      INFO     Mic calibrated: rms=0.000015 threshold=0.000500 rate=16000
+2026-03-16 17:48:29,919  speech_to_text      INFO     Whisper loaded: model=small.en device=cuda compute=float16
+2026-03-16 17:48:29,920  sentence_transformers.SentenceTransformer  INFO     Use pytorch device_name: cuda:0
+2026-03-16 17:48:29,920  sentence_transformers.SentenceTransformer  INFO     Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2026-03-16 17:48:34,242  rag_engine          INFO     SQLite vault initialized: vault.db
+2026-03-16 17:48:34,242  rag_engine          INFO     RAG engine ready: 0 chunks, model=BAAI/bge-small-en-v1.5
+2026-03-16 17:48:36,456  httpx               INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-16 17:48:36,456  llm_handler         INFO     Ollama connected: 7 models
+2026-03-16 17:48:42,973  llm_handler         INFO     Direct Ollama mode with model: james-oss:latest
+2026-03-16 17:48:43,293  commands            INFO     Command executor initialized
+2026-03-16 17:48:43,293  __main__            INFO     Jarvis initialized: model=james-oss:latest device=cuda
+2026-03-16 17:48:44,418  text_to_speech      INFO     Piper TTS (Python): 1.1s
+2026-03-16 17:48:53,921  faster_whisper      INFO     Processing audio with duration 00:00.156
+2026-03-16 17:48:54,005  faster_whisper      INFO     VAD filter removed 00:00.156 of audio
+2026-03-16 17:48:54,038  speech_to_text      WARNING  STT: no speech detected (0.23s)
+2026-03-16 17:49:11,927  faster_whisper      INFO     Processing audio with duration 00:14.508
+2026-03-16 17:49:11,996  faster_whisper      INFO     VAD filter removed 00:14.508 of audio
+2026-03-16 17:49:12,025  speech_to_text      WARNING  STT: no speech detected (0.22s)
+2026-03-16 17:49:19,418  faster_whisper      INFO     Processing audio with duration 00:00.156
+2026-03-16 17:49:19,420  faster_whisper      INFO     VAD filter removed 00:00.156 of audio
+2026-03-16 17:49:19,452  speech_to_text      WARNING  STT: no speech detected (0.14s)
+2026-03-16 17:49:21,931  faster_whisper      INFO     Processing audio with duration 00:00.364
+2026-03-16 17:49:21,931  faster_whisper      INFO     VAD filter removed 00:00.364 of audio
+2026-03-16 17:49:21,960  speech_to_text      WARNING  STT: no speech detected (0.14s)
+2026-03-16 17:49:25,798  faster_whisper      INFO     Processing audio with duration 00:00.910
+2026-03-16 17:49:25,803  faster_whisper      INFO     VAD filter removed 00:00.910 of audio
+2026-03-16 17:49:25,834  speech_to_text      WARNING  STT: no speech detected (0.14s)
+2026-03-16 17:49:28,917  faster_whisper      INFO     Processing audio with duration 00:00.130
+2026-03-16 17:49:28,922  faster_whisper      INFO     VAD filter removed 00:00.130 of audio
+2026-03-16 17:49:28,951  speech_to_text      WARNING  STT: no speech detected (0.14s)
+2026-03-16 17:49:59,503  audio_recorder      INFO     Silero VAD loaded
+2026-03-16 17:50:03,353  audio_recorder      INFO     Sample rate 16000 Hz works for device None
+2026-03-16 17:50:05,978  audio_recorder      INFO     Mic calibrated: rms=0.000015 threshold=0.000500 rate=16000
+2026-03-16 17:50:07,217  speech_to_text      INFO     Whisper loaded: model=small.en device=cuda compute=float16
+2026-03-16 17:50:07,220  sentence_transformers.SentenceTransformer  INFO     Use pytorch device_name: cuda:0
+2026-03-16 17:50:07,220  sentence_transformers.SentenceTransformer  INFO     Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2026-03-16 17:50:11,600  rag_engine          INFO     SQLite vault initialized: vault.db
+2026-03-16 17:50:11,600  rag_engine          INFO     RAG engine ready: 0 chunks, model=BAAI/bge-small-en-v1.5
+2026-03-16 17:50:13,830  httpx               INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-16 17:50:13,830  llm_handler         INFO     Ollama connected: 7 models
+2026-03-16 17:50:16,798  llm_handler         INFO     Direct Ollama mode with model: james-oss:latest
+2026-03-16 17:50:17,123  commands            INFO     Command executor initialized
+2026-03-16 17:50:17,123  __main__            INFO     Jarvis initialized: model=james-oss:latest device=cuda
+2026-03-16 17:50:18,275  text_to_speech      INFO     Piper TTS (Python): 1.2s
+2026-03-16 17:50:26,419  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 17:50:40,178  audio_recorder      INFO     Captured 3.0s with Silero VAD
+2026-03-16 17:50:40,303  faster_whisper      INFO     Processing audio with duration 00:03.008
+2026-03-16 17:50:40,392  faster_whisper      INFO     VAD filter removed 00:01.136 of audio
+2026-03-16 17:50:40,725  speech_to_text      INFO     STT: 'Hey, open YouTube!' (0.55s)
+2026-03-16 17:51:30,121  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 17:51:36,598  llm_handler         INFO     Ollama direct response: 116 chars
+2026-03-16 17:51:37,886  text_to_speech      INFO     Piper TTS (Python): 1.3s
+2026-03-16 17:51:57,702  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 17:52:03,279  audio_recorder      INFO     Captured 3.4s with Silero VAD
+2026-03-16 17:52:03,414  faster_whisper      INFO     Processing audio with duration 00:03.392
+2026-03-16 17:52:03,432  faster_whisper      INFO     VAD filter removed 00:00.000 of audio
+2026-03-16 17:52:03,962  speech_to_text      INFO     STT: 'Hey, tell me any story, a horror story.' (0.68s)
+2026-03-16 17:52:07,281  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 17:52:17,783  llm_handler         INFO     Ollama direct response: 0 chars
+2026-03-16 17:52:25,184  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 17:52:35,070  audio_recorder      INFO     Captured 6.6s with Silero VAD
+2026-03-16 17:52:35,191  faster_whisper      INFO     Processing audio with duration 00:06.624
+2026-03-16 17:52:35,220  faster_whisper      INFO     VAD filter removed 00:01.360 of audio
+2026-03-16 17:52:35,758  speech_to_text      INFO     STT: 'Hey, tell me in the story, like horror story.' (0.69s)
+2026-03-16 17:52:38,782  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 17:52:49,692  llm_handler         INFO     Ollama direct response: 0 chars
+2026-03-16 18:05:28,341  audio_recorder      INFO     Silero VAD loaded
+2026-03-16 18:05:33,878  audio_recorder      INFO     Sample rate 16000 Hz works for device None
+2026-03-16 18:05:36,493  audio_recorder      INFO     Mic calibrated: rms=0.000015 threshold=0.000500 rate=16000
+2026-03-16 18:05:38,338  speech_to_text      INFO     Whisper loaded: model=small.en device=cuda compute=float16
+2026-03-16 18:05:38,339  sentence_transformers.SentenceTransformer  INFO     Use pytorch device_name: cuda:0
+2026-03-16 18:05:38,339  sentence_transformers.SentenceTransformer  INFO     Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2026-03-16 18:05:42,867  rag_engine          INFO     SQLite vault initialized: vault.db
+2026-03-16 18:05:42,867  rag_engine          INFO     RAG engine ready: 0 chunks, model=BAAI/bge-small-en-v1.5
+2026-03-16 18:05:45,091  httpx               INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-16 18:05:45,091  llm_handler         INFO     Ollama connected: 7 models
+2026-03-16 18:05:48,724  llm_handler         INFO     Direct Ollama mode with model: james-oss:latest
+2026-03-16 18:05:49,073  commands            INFO     Command executor initialized
+2026-03-16 18:05:49,074  __main__            INFO     Jarvis initialized: model=james-oss:latest device=cuda
+2026-03-16 18:05:50,505  text_to_speech      INFO     Piper TTS (Python): 1.4s
+2026-03-16 18:05:57,536  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 18:06:12,641  audio_recorder      INFO     Captured 3.4s with Silero VAD
+2026-03-16 18:06:12,767  faster_whisper      INFO     Processing audio with duration 00:03.424
+2026-03-16 18:06:12,854  faster_whisper      INFO     VAD filter removed 00:01.136 of audio
+2026-03-16 18:06:13,473  speech_to_text      INFO     STT: 'Hey, how's your days going?' (0.83s)
+2026-03-16 18:06:34,968  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 18:06:45,290  llm_handler         INFO     Ollama direct response: 0 chars
+2026-03-16 18:06:49,233  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 18:07:02,604  audio_recorder      INFO     Captured 3.5s with Silero VAD
+2026-03-16 18:07:02,727  faster_whisper      INFO     Processing audio with duration 00:03.520
+2026-03-16 18:07:02,741  faster_whisper      INFO     VAD filter removed 00:01.136 of audio
+2026-03-16 18:07:03,224  speech_to_text      INFO     STT: 'I said, how's your day going?' (0.62s)
+2026-03-16 18:07:08,163  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 18:07:22,518  llm_handler         INFO     Ollama direct response: 65 chars
+2026-03-16 18:07:23,723  text_to_speech      INFO     Piper TTS (Python): 1.2s
+2026-03-16 18:07:31,083  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 18:07:45,803  audio_recorder      INFO     Captured 6.0s with Silero VAD
+2026-03-16 18:07:45,903  faster_whisper      INFO     Processing audio with duration 00:06.016
+2026-03-16 18:07:45,933  faster_whisper      INFO     VAD filter removed 00:02.256 of audio
+2026-03-16 18:07:46,491  speech_to_text      INFO     STT: 'tell me a horror story  a best one' (0.69s)
+2026-03-16 18:07:49,663  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 18:07:59,980  llm_handler         INFO     Ollama direct response: 0 chars
+2026-03-16 18:08:07,507  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 18:08:17,250  audio_recorder      INFO     Captured 3.9s with Silero VAD
+2026-03-16 18:08:17,354  faster_whisper      INFO     Processing audio with duration 00:03.904
+2026-03-16 18:08:17,383  faster_whisper      INFO     VAD filter removed 00:01.168 of audio
+2026-03-16 18:08:17,803  speech_to_text      INFO     STT: 'Hey, tell me a horror story.' (0.55s)
+2026-03-16 18:08:22,538  httpx               INFO     HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-16 18:08:37,501  llm_handler         INFO     Ollama direct response: 0 chars
+2026-03-16 18:08:43,279  text_to_speech      INFO     Piper TTS (Python): 1.1s
+2026-03-16 18:37:52,359  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-16 18:38:48,781  piper.download_voices INFO     Downloaded: en_US-amy-medium
+2026-03-16 18:39:20,831  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-16 18:41:32,899  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-16 18:41:45,041  faster_whisper       INFO     Processing audio with duration 00:01.321
+2026-03-16 18:42:06,587  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-16 18:42:20,525  faster_whisper       INFO     Processing audio with duration 00:02.901
+2026-03-16 18:42:23,145  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-16 18:42:54,123  faster_whisper       INFO     Processing audio with duration 00:03.241
+2026-03-16 18:42:56,344  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-16 18:44:07,003  faster_whisper       INFO     Processing audio with duration 00:01.961
+2026-03-16 18:44:09,230  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-16 18:44:46,264  faster_whisper       INFO     Processing audio with duration 00:01.641
+2026-03-16 18:44:47,223  faster_whisper       INFO     Processing audio with duration 00:00.961
+2026-03-16 18:44:48,942  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-16 18:57:07,630  audio_recorder      INFO     Silero VAD loaded
+2026-03-16 18:57:13,512  audio_recorder      INFO     Sample rate 16000 Hz works for device None
+2026-03-16 18:57:15,575  audio_recorder      INFO     Mic calibrated: rms=0.002484 threshold=0.004969 rate=16000
+2026-03-16 18:57:17,426  speech_to_text      INFO     Whisper loaded: model=small.en device=cuda compute=float16
+2026-03-16 18:57:17,427  sentence_transformers.SentenceTransformer  INFO     Use pytorch device_name: cuda:0
+2026-03-16 18:57:17,427  sentence_transformers.SentenceTransformer  INFO     Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2026-03-16 18:57:22,450  rag_engine          INFO     SQLite vault initialized: vault.db
+2026-03-16 18:57:22,450  rag_engine          INFO     RAG engine ready: 0 chunks, model=BAAI/bge-small-en-v1.5
+2026-03-16 18:57:24,679  httpx               INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-16 18:57:24,680  llm_handler         INFO     Ollama connected: 7 models
+2026-03-16 18:57:35,677  llm_handler         INFO     Direct Ollama mode with model: james-dolphin2:latest
+2026-03-16 18:57:36,217  commands            INFO     Command executor initialized
+2026-03-16 18:57:36,221  __main__            INFO     Jarvis initialized: model=james-dolphin2:latest device=cuda
+2026-03-16 18:57:37,491  text_to_speech      INFO     Piper TTS (Python): 1.3s
+2026-03-16 18:57:42,948  audio_recorder      INFO     Speech detected (Silero VAD)
+2026-03-16 18:57:47,129  text_to_speech      INFO     Piper TTS (Python): 1.2s
+2026-03-16 19:02:35,968  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-16 19:02:50,757  faster_whisper       INFO     Processing audio with duration 00:01.341
+2026-03-16 19:02:58,051  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-16 19:03:05,728  faster_whisper       INFO     Processing audio with duration 00:02.341
+2026-03-16 19:03:07,160  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-16 19:06:45,448  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-16 19:07:18,014  faster_whisper       INFO     Processing audio with duration 00:01.421
+2026-03-16 19:12:55,500  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-16 19:13:10,747  faster_whisper       INFO     Processing audio with duration 00:01.281
+2026-03-16 19:13:31,587  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-16 19:13:49,474  faster_whisper       INFO     Processing audio with duration 00:02.321
+2026-03-16 19:13:51,606  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-16 19:13:58,476  faster_whisper       INFO     Processing audio with duration 00:01.781
+2026-03-16 19:14:00,097  faster_whisper       INFO     Processing audio with duration 00:01.621
+2026-03-16 19:14:03,952  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-16 19:14:05,437  faster_whisper       INFO     Processing audio with duration 00:02.401
+2026-03-16 19:14:06,408  faster_whisper       INFO     Processing audio with duration 00:00.841
+2026-03-16 19:14:07,858  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-16 19:14:12,637  faster_whisper       INFO     Processing audio with duration 00:02.941
+2026-03-16 19:14:16,365  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-16 19:16:23,318  faster_whisper       INFO     Processing audio with duration 00:01.961
+2026-03-16 19:16:25,997  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-16 19:19:36,766  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-16 19:23:40,953  faster_whisper       INFO     Processing audio with duration 00:01.341
+2026-03-16 19:24:02,314  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-16 19:24:22,422  faster_whisper       INFO     Processing audio with duration 00:03.121
+2026-03-16 19:24:24,710  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-16 19:24:57,303  faster_whisper       INFO     Processing audio with duration 00:01.381
+2026-03-16 19:25:09,180  faster_whisper       INFO     Processing audio with duration 00:02.861
+2026-03-16 19:25:11,195  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-16 19:25:20,503  faster_whisper       INFO     Processing audio with duration 00:01.221
+2026-03-16 19:25:22,833  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:26:19,080  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-17 14:27:32,435  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-17 14:27:53,595  faster_whisper       INFO     Processing audio with duration 00:01.361
+2026-03-17 14:28:15,815  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:28:24,132  faster_whisper       INFO     Processing audio with duration 00:01.281
+2026-03-17 14:28:27,413  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:28:31,914  faster_whisper       INFO     Processing audio with duration 00:01.861
+2026-03-17 14:28:33,807  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:29:19,561  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-17 14:29:42,139  faster_whisper       INFO     Processing audio with duration 00:01.281
+2026-03-17 14:29:50,725  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:29:52,435  faster_whisper       INFO     Processing audio with duration 00:01.581
+2026-03-17 14:29:53,545  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:29:54,912  faster_whisper       INFO     Processing audio with duration 00:01.561
+2026-03-17 14:29:55,994  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:29:57,395  faster_whisper       INFO     Processing audio with duration 00:01.561
+2026-03-17 14:29:58,475  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:30:00,118  faster_whisper       INFO     Processing audio with duration 00:01.581
+2026-03-17 14:30:01,224  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:30:02,758  faster_whisper       INFO     Processing audio with duration 00:01.541
+2026-03-17 14:30:03,848  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:30:05,777  faster_whisper       INFO     Processing audio with duration 00:01.521
+2026-03-17 14:30:06,872  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:30:08,235  faster_whisper       INFO     Processing audio with duration 00:01.521
+2026-03-17 14:30:09,344  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:30:10,898  faster_whisper       INFO     Processing audio with duration 00:01.541
+2026-03-17 14:30:12,000  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:30:13,576  faster_whisper       INFO     Processing audio with duration 00:01.541
+2026-03-17 14:30:28,046  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-17 14:30:38,419  faster_whisper       INFO     Processing audio with duration 00:01.301
+2026-03-17 14:31:09,895  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-17 14:31:18,220  faster_whisper       INFO     Processing audio with duration 00:01.321
+2026-03-17 14:31:30,167  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:31:31,720  faster_whisper       INFO     Processing audio with duration 00:01.541
+2026-03-17 14:31:32,881  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:31:35,020  faster_whisper       INFO     Processing audio with duration 00:01.541
+2026-03-17 14:31:36,140  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:31:37,483  faster_whisper       INFO     Processing audio with duration 00:01.321
+2026-03-17 14:31:38,950  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:31:40,957  faster_whisper       INFO     Processing audio with duration 00:01.561
+2026-03-17 14:31:42,073  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:31:43,940  faster_whisper       INFO     Processing audio with duration 00:01.541
+2026-03-17 14:31:45,026  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:31:47,022  faster_whisper       INFO     Processing audio with duration 00:01.541
+2026-03-17 14:31:53,951  faster_whisper       INFO     Processing audio with duration 00:01.761
+2026-03-17 14:31:55,256  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:31:57,757  faster_whisper       INFO     Processing audio with duration 00:01.521
+2026-03-17 14:31:58,874  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:32:01,113  faster_whisper       INFO     Processing audio with duration 00:01.581
+2026-03-17 14:33:07,334  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-17 14:33:14,451  faster_whisper       INFO     Processing audio with duration 00:01.381
+2026-03-17 14:33:18,450  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:33:20,130  faster_whisper       INFO     Processing audio with duration 00:01.381
+2026-03-17 14:33:21,232  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:33:22,529  faster_whisper       INFO     Processing audio with duration 00:01.521
+2026-03-17 14:33:23,680  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:33:25,469  faster_whisper       INFO     Processing audio with duration 00:01.421
+2026-03-17 14:33:26,624  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:33:27,850  faster_whisper       INFO     Processing audio with duration 00:01.401
+2026-03-17 14:33:28,991  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:33:30,088  faster_whisper       INFO     Processing audio with duration 00:01.421
+2026-03-17 14:33:52,882  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-17 14:34:01,477  faster_whisper       INFO     Processing audio with duration 00:01.281
+2026-03-17 14:34:02,907  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:34:12,668  faster_whisper       INFO     Processing audio with duration 00:01.601
+2026-03-17 14:34:13,937  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:34:38,499  faster_whisper       INFO     Processing audio with duration 00:01.821
+2026-03-17 14:34:39,748  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:35:24,469  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-17 14:35:36,738  faster_whisper       INFO     Processing audio with duration 00:01.241
+2026-03-17 14:36:03,672  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 14:36:20,216  faster_whisper       INFO     Processing audio with duration 00:02.961
+2026-03-17 14:36:22,494  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 15:14:41,408  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-17 15:15:10,751  faster_whisper       INFO     Processing audio with duration 00:01.321
+2026-03-17 15:15:12,652  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+2026-03-17 15:15:12,654  openai._base_client  INFO     Retrying request to /chat/completions in 0.387191 seconds
+2026-03-17 15:15:13,316  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+2026-03-17 15:15:13,317  openai._base_client  INFO     Retrying request to /chat/completions in 0.980328 seconds
+2026-03-17 15:15:14,540  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+2026-03-17 15:15:21,805  faster_whisper       INFO     Processing audio with duration 00:01.401
+2026-03-17 15:15:22,657  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+2026-03-17 15:15:22,659  openai._base_client  INFO     Retrying request to /chat/completions in 0.475938 seconds
+2026-03-17 15:15:23,378  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+2026-03-17 15:15:23,380  openai._base_client  INFO     Retrying request to /chat/completions in 0.767199 seconds
+2026-03-17 15:15:24,395  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+2026-03-17 15:16:14,041  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-17 15:16:27,360  faster_whisper       INFO     Processing audio with duration 00:01.341
+2026-03-17 15:16:35,372  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 15:17:03,134  faster_whisper       INFO     Processing audio with duration 00:01.961
+2026-03-17 15:17:05,197  faster_whisper       INFO     Processing audio with duration 00:02.061
+2026-03-17 15:17:05,964  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 15:17:16,377  faster_whisper       INFO     Processing audio with duration 00:02.861
+2026-03-17 15:17:18,494  faster_whisper       INFO     Processing audio with duration 00:02.121
+2026-03-17 15:17:19,854  faster_whisper       INFO     Processing audio with duration 00:01.361
+2026-03-17 15:17:20,630  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 15:18:04,234  faster_whisper       INFO     Processing audio with duration 00:01.861
+2026-03-17 15:18:13,859  faster_whisper       INFO     Processing audio with duration 00:01.721
+2026-03-17 15:18:15,277  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 15:18:49,974  faster_whisper       INFO     Processing audio with duration 00:02.121
+2026-03-17 15:18:51,275  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 15:19:02,371  faster_whisper       INFO     Processing audio with duration 00:02.281
+2026-03-17 15:19:03,810  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 15:19:51,728  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-17 15:20:11,643  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-17 15:20:39,655  faster_whisper       INFO     Processing audio with duration 00:01.381
+2026-03-17 15:21:06,858  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-17 15:21:27,413  faster_whisper       INFO     Processing audio with duration 00:02.181
+2026-03-17 15:21:29,845  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 08:34:43,378  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 08:38:17,734  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 08:38:27,285  faster_whisper       INFO     Processing audio with duration 00:01.281
+2026-03-18 08:38:41,856  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 08:40:15,484  faster_whisper       INFO     Processing audio with duration 00:01.241
+2026-03-18 08:40:17,370  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 08:40:27,926  faster_whisper       INFO     Processing audio with duration 00:01.261
+2026-03-18 08:41:11,784  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 08:41:19,012  faster_whisper       INFO     Processing audio with duration 00:01.281
+2026-03-18 08:41:21,195  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 08:41:44,016  faster_whisper       INFO     Processing audio with duration 00:01.281
+2026-03-18 08:41:46,313  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:05:25,916  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 14:06:19,671  faster_whisper       INFO     Processing audio with duration 00:01.281
+2026-03-18 14:06:28,687  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:08:50,311  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 14:09:45,329  faster_whisper       INFO     Processing audio with duration 00:01.281
+2026-03-18 14:09:49,280  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:11:58,908  faster_whisper       INFO     Processing audio with duration 00:01.261
+2026-03-18 14:12:00,377  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:12:11,406  faster_whisper       INFO     Processing audio with duration 00:01.341
+2026-03-18 14:12:13,085  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:13:15,106  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 14:13:22,334  faster_whisper       INFO     Processing audio with duration 00:00.781
+2026-03-18 14:13:26,057  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:13:35,272  faster_whisper       INFO     Processing audio with duration 00:01.361
+2026-03-18 14:13:37,016  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:14:37,743  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 14:14:47,139  faster_whisper       INFO     Processing audio with duration 00:01.421
+2026-03-18 14:14:50,895  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:14:57,055  faster_whisper       INFO     Processing audio with duration 00:01.321
+2026-03-18 14:14:58,415  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:15:05,277  faster_whisper       INFO     Processing audio with duration 00:01.301
+2026-03-18 14:15:07,572  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:17:11,924  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 14:17:27,297  faster_whisper       INFO     Processing audio with duration 00:01.361
+2026-03-18 14:17:31,538  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:23:53,558  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 14:24:02,992  faster_whisper       INFO     Processing audio with duration 00:01.341
+2026-03-18 14:29:21,086  __main__             ERROR    Cannot list Ollama models: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-03-18 14:29:48,295  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 14:29:57,464  faster_whisper       INFO     Processing audio with duration 00:01.521
+2026-03-18 14:32:20,765  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 14:32:27,661  faster_whisper       INFO     Processing audio with duration 00:01.281
+2026-03-18 14:32:31,642  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:34:49,873  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 14:34:55,034  faster_whisper       INFO     Processing audio with duration 00:01.181
+2026-03-18 14:34:57,921  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:35:06,727  faster_whisper       INFO     Processing audio with duration 00:01.261
+2026-03-18 14:35:08,364  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:35:33,613  faster_whisper       INFO     Processing audio with duration 00:01.501
+2026-03-18 14:35:35,904  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:35:39,533  faster_whisper       INFO     Processing audio with duration 00:01.661
+2026-03-18 14:35:40,839  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:41:03,868  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 14:41:25,936  faster_whisper       INFO     Processing audio with duration 00:01.221
+2026-03-18 14:41:30,080  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:42:10,543  faster_whisper       INFO     Processing audio with duration 00:01.761
+2026-03-18 14:42:12,243  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:42:35,306  faster_whisper       INFO     Processing audio with duration 00:01.481
+2026-03-18 14:42:36,698  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:43:50,157  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 14:43:58,372  faster_whisper       INFO     Processing audio with duration 00:01.301
+2026-03-18 14:43:59,770  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:48:29,027  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 14:48:43,978  faster_whisper       INFO     Processing audio with duration 00:01.281
+2026-03-18 14:48:46,197  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 14:52:56,758  __main__             ERROR    Cannot list Ollama models: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-03-18 14:54:00,211  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 14:54:12,873  faster_whisper       INFO     Processing audio with duration 00:01.361
+2026-03-18 14:54:14,100  httpx                INFO     HTTP Request: POST http://localhost:11434/chat/completions "HTTP/1.1 404 Not Found"
+2026-03-18 14:58:36,583  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 14:58:46,275  faster_whisper       INFO     Processing audio with duration 00:01.321
+2026-03-18 14:58:47,499  httpx                INFO     HTTP Request: POST http://localhost:11434/chat/completions "HTTP/1.1 404 Not Found"
+2026-03-18 15:00:39,313  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 15:01:42,077  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 15:01:50,559  faster_whisper       INFO     Processing audio with duration 00:01.241
+2026-03-18 15:01:52,559  httpx                INFO     HTTP Request: POST http://localhost:11434/api/chat/completions "HTTP/1.1 404 Not Found"
+2026-03-18 15:08:33,601  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 15:08:42,194  faster_whisper       INFO     Processing audio with duration 00:01.261
+2026-03-18 15:08:55,853  faster_whisper       INFO     Processing audio with duration 00:01.341
+2026-03-18 15:08:57,213  httpx                INFO     HTTP Request: POST http://localhost:11434/api/chat/completions "HTTP/1.1 404 Not Found"
+2026-03-18 15:36:24,773  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 15:36:34,451  faster_whisper       INFO     Processing audio with duration 00:01.261
+2026-03-18 15:36:45,812  faster_whisper       INFO     Processing audio with duration 00:01.361
+2026-03-18 15:36:49,983  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 15:36:55,805  faster_whisper       INFO     Processing audio with duration 00:01.321
+2026-03-18 15:36:57,279  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 15:39:52,623  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 15:40:03,968  faster_whisper       INFO     Processing audio with duration 00:01.321
+2026-03-18 15:40:05,365  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 15:53:53,808  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 15:54:01,094  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 15:54:09,323  __main__             INFO     ==================================================
+2026-03-18 15:54:09,323  __main__             INFO     LLM MODEL SELECTED: james-dolphin2:latest
+2026-03-18 15:54:09,323  __main__             INFO     Ollama URL: http://localhost:11434/v1
+2026-03-18 15:54:09,323  __main__             INFO     ==================================================
+2026-03-18 15:54:14,121  faster_whisper       INFO     Processing audio with duration 00:01.321
+2026-03-18 15:54:18,412  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 15:54:30,349  faster_whisper       INFO     Processing audio with duration 00:01.401
+2026-03-18 15:54:31,641  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 15:54:39,923  faster_whisper       INFO     Processing audio with duration 00:03.661
+2026-03-18 15:54:41,514  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:05:31,283  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 16:06:16,158  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 16:06:21,586  __main__             INFO     ==================================================
+2026-03-18 16:06:21,586  __main__             INFO     LLM MODEL SELECTED: james-dolphin2:latest
+2026-03-18 16:06:21,595  __main__             INFO     Ollama URL: http://localhost:11434/v1
+2026-03-18 16:06:21,595  __main__             INFO     ==================================================
+2026-03-18 16:06:25,397  faster_whisper       INFO     Processing audio with duration 00:01.281
+2026-03-18 16:06:33,270  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:06:52,681  faster_whisper       INFO     Processing audio with duration 00:01.901
+2026-03-18 16:06:53,975  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:07:21,201  faster_whisper       INFO     Processing audio with duration 00:01.601
+2026-03-18 16:07:22,632  faster_whisper       INFO     Processing audio with duration 00:01.441
+2026-03-18 16:07:23,388  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:07:30,122  faster_whisper       INFO     Processing audio with duration 00:02.561
+2026-03-18 16:07:31,511  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:08:00,140  faster_whisper       INFO     Processing audio with duration 00:02.261
+2026-03-18 16:08:01,578  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:08:31,217  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 16:08:42,821  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 16:08:44,333  __main__             INFO     ==================================================
+2026-03-18 16:08:44,333  __main__             INFO     LLM MODEL SELECTED: qwen3-coder:30b
+2026-03-18 16:08:44,348  __main__             INFO     Ollama URL: http://localhost:11434/v1
+2026-03-18 16:08:44,348  __main__             INFO     ==================================================
+2026-03-18 16:08:48,176  faster_whisper       INFO     Processing audio with duration 00:01.281
+2026-03-18 16:09:25,121  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:09:48,248  faster_whisper       INFO     Processing audio with duration 00:02.021
+2026-03-18 16:09:54,765  faster_whisper       INFO     Processing audio with duration 00:02.081
+2026-03-18 16:09:56,914  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:10:09,705  faster_whisper       INFO     Processing audio with duration 00:02.181
+2026-03-18 16:10:11,633  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:10:57,067  faster_whisper       INFO     Processing audio with duration 00:02.641
+2026-03-18 16:10:59,146  faster_whisper       INFO     Processing audio with duration 00:01.261
+2026-03-18 16:11:01,226  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:11:58,267  faster_whisper       INFO     Processing audio with duration 00:03.541
+2026-03-18 16:12:00,448  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:13:32,815  faster_whisper       INFO     Processing audio with duration 00:01.261
+2026-03-18 16:13:46,137  faster_whisper       INFO     Processing audio with duration 00:02.741
+2026-03-18 16:13:48,349  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:18:30,928  faster_whisper       INFO     Processing audio with duration 00:02.421
+2026-03-18 16:18:33,303  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:22:34,598  faster_whisper       INFO     Processing audio with duration 00:01.201
+2026-03-18 16:22:36,982  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:22:49,995  faster_whisper       INFO     Processing audio with duration 00:01.961
+2026-03-18 16:22:51,158  faster_whisper       INFO     Processing audio with duration 00:01.161
+2026-03-18 16:22:52,017  faster_whisper       INFO     Processing audio with duration 00:00.861
+2026-03-18 16:22:53,451  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:24:04,717  faster_whisper       INFO     Processing audio with duration 00:01.801
+2026-03-18 16:24:06,836  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:25:02,236  faster_whisper       INFO     Processing audio with duration 00:02.741
+2026-03-18 16:25:04,426  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:26:01,467  faster_whisper       INFO     Processing audio with duration 00:01.321
+2026-03-18 16:26:02,897  faster_whisper       INFO     Processing audio with duration 00:01.441
+2026-03-18 16:26:04,836  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:26:44,075  faster_whisper       INFO     Processing audio with duration 00:02.301
+2026-03-18 16:26:45,277  faster_whisper       INFO     Processing audio with duration 00:01.201
+2026-03-18 16:26:47,307  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:26:54,177  faster_whisper       INFO     Processing audio with duration 00:01.441
+2026-03-18 16:26:56,357  faster_whisper       INFO     Processing audio with duration 00:02.181
+2026-03-18 16:26:56,959  faster_whisper       INFO     Processing audio with duration 00:00.601
+2026-03-18 16:26:58,591  faster_whisper       INFO     Processing audio with duration 00:01.641
+2026-03-18 16:26:59,883  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:27:49,870  faster_whisper       INFO     Processing audio with duration 00:01.481
+2026-03-18 16:27:51,595  faster_whisper       INFO     Processing audio with duration 00:01.721
+2026-03-18 16:27:53,420  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:28:11,657  faster_whisper       INFO     Processing audio with duration 00:01.321
+2026-03-18 16:30:10,716  faster_whisper       INFO     Processing audio with duration 00:01.501
+2026-03-18 16:32:15,178  faster_whisper       INFO     Processing audio with duration 00:01.221
+2026-03-18 16:33:15,038  faster_whisper       INFO     Processing audio with duration 00:01.341
+2026-03-18 16:33:16,518  faster_whisper       INFO     Processing audio with duration 00:01.481
+2026-03-18 16:33:52,454  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:35:12,658  faster_whisper       INFO     Processing audio with duration 00:01.381
+2026-03-18 16:35:23,977  faster_whisper       INFO     Processing audio with duration 00:01.441
+2026-03-18 16:35:25,973  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 16:35:35,035  faster_whisper       INFO     Processing audio with duration 00:03.561
+2026-03-18 16:35:36,694  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 17:06:12,937  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-18 17:06:16,362  __main__             INFO     ==================================================
+2026-03-18 17:06:16,362  __main__             INFO     LLM MODEL SELECTED: qwen3-coder:30b
+2026-03-18 17:06:16,362  __main__             INFO     Ollama URL: http://localhost:11434/v1
+2026-03-18 17:06:16,362  __main__             INFO     ==================================================
+2026-03-18 17:06:31,104  faster_whisper       INFO     Processing audio with duration 00:01.261
+2026-03-18 17:07:04,096  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 17:07:13,315  faster_whisper       INFO     Processing audio with duration 00:02.161
+2026-03-18 17:07:15,407  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 17:07:44,568  faster_whisper       INFO     Processing audio with duration 00:04.321
+2026-03-18 17:07:46,714  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 17:08:40,423  faster_whisper       INFO     Processing audio with duration 00:02.921
+2026-03-18 17:08:41,924  faster_whisper       INFO     Processing audio with duration 00:01.501
+2026-03-18 17:08:44,924  faster_whisper       INFO     Processing audio with duration 00:03.001
+2026-03-18 17:08:45,664  faster_whisper       INFO     Processing audio with duration 00:00.741
+2026-03-18 17:08:46,608  faster_whisper       INFO     Processing audio with duration 00:00.941
+2026-03-18 17:08:48,586  faster_whisper       INFO     Processing audio with duration 00:01.201
+2026-03-18 17:09:04,100  faster_whisper       INFO     Processing audio with duration 00:04.181
+2026-03-18 17:09:04,650  faster_whisper       INFO     Processing audio with duration 00:00.541
+2026-03-18 17:09:06,165  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 17:09:57,748  faster_whisper       INFO     Processing audio with duration 00:02.941
+2026-03-18 17:10:00,620  faster_whisper       INFO     Processing audio with duration 00:02.881
+2026-03-18 17:10:01,167  faster_whisper       INFO     Processing audio with duration 00:00.541
+2026-03-18 17:10:02,476  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 17:10:41,296  faster_whisper       INFO     Processing audio with duration 00:03.281
+2026-03-18 17:10:43,387  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 17:11:09,090  faster_whisper       INFO     Processing audio with duration 00:01.941
+2026-03-18 17:11:11,362  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 17:11:32,530  faster_whisper       INFO     Processing audio with duration 00:01.681
+2026-03-18 17:11:34,369  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 17:12:01,374  faster_whisper       INFO     Processing audio with duration 00:02.881
+2026-03-18 17:12:03,408  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 17:12:22,796  faster_whisper       INFO     Processing audio with duration 00:04.001
+2026-03-18 17:12:24,708  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 17:12:49,096  faster_whisper       INFO     Processing audio with duration 00:02.221
+2026-03-18 17:12:49,976  faster_whisper       INFO     Processing audio with duration 00:00.881
+2026-03-18 17:12:51,109  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 17:12:57,493  faster_whisper       INFO     Processing audio with duration 00:01.801
+2026-03-18 17:12:58,796  faster_whisper       INFO     Processing audio with duration 00:01.301
+2026-03-18 17:13:02,431  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-18 17:13:25,807  faster_whisper       INFO     Processing audio with duration 00:01.481
+2026-03-18 17:13:27,777  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 09:06:06,150  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-19 09:06:10,273  __main__             INFO     ==================================================
+2026-03-19 09:06:10,273  __main__             INFO     LLM MODEL SELECTED: jaahas/qwen3.5-uncensored:9b
+2026-03-19 09:06:10,273  __main__             INFO     Ollama URL: http://localhost:11434/v1
+2026-03-19 09:06:10,275  __main__             INFO     ==================================================
+2026-03-19 09:06:38,948  faster_whisper       INFO     Processing audio with duration 00:01.261
+2026-03-19 09:06:42,004  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 09:07:33,556  faster_whisper       INFO     Processing audio with duration 00:01.361
+2026-03-19 09:08:44,888  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-19 09:08:51,414  __main__             INFO     ==================================================
+2026-03-19 09:08:51,414  __main__             INFO     LLM MODEL SELECTED: qwen3-coder:30b
+2026-03-19 09:08:51,414  __main__             INFO     Ollama URL: http://localhost:11434/v1
+2026-03-19 09:08:51,414  __main__             INFO     ==================================================
+2026-03-19 09:08:56,118  faster_whisper       INFO     Processing audio with duration 00:01.201
+2026-03-19 09:09:29,029  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 09:09:57,245  faster_whisper       INFO     Processing audio with duration 00:02.841
+2026-03-19 09:09:57,883  faster_whisper       INFO     Processing audio with duration 00:00.641
+2026-03-19 09:09:59,202  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 09:10:14,765  faster_whisper       INFO     Processing audio with duration 00:02.281
+2026-03-19 09:10:16,804  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 09:10:46,321  faster_whisper       INFO     Processing audio with duration 00:01.541
+2026-03-19 09:10:47,382  faster_whisper       INFO     Processing audio with duration 00:01.061
+2026-03-19 09:10:48,543  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 09:11:28,002  faster_whisper       INFO     Processing audio with duration 00:02.881
+2026-03-19 09:11:30,067  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-21 08:20:36,216  httpx                INFO     HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-03-21 08:20:40,677  __main__             INFO     ==================================================
+2026-03-21 08:20:40,677  __main__             INFO     LLM MODEL SELECTED: frob/qwen3.5-instruct:9b
+2026-03-21 08:20:40,677  __main__             INFO     Ollama URL: http://localhost:11434/v1
+2026-03-21 08:20:40,677  __main__             INFO     ==================================================
+2026-03-21 08:21:06,866  faster_whisper       INFO     Processing audio with duration 00:01.201
+2026-03-21 08:21:21,820  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-21 08:21:37,702  faster_whisper       INFO     Processing audio with duration 00:01.721
+2026-03-21 08:21:39,533  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-21 08:23:44,445  faster_whisper       INFO     Processing audio with duration 00:02.341
+2026-03-21 08:23:46,301  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-21 08:25:20,645  faster_whisper       INFO     Processing audio with duration 00:03.461
+2026-03-21 08:25:22,727  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-21 08:25:36,024  faster_whisper       INFO     Processing audio with duration 00:01.521
+2026-03-21 08:25:37,945  faster_whisper       INFO     Processing audio with duration 00:01.401
+2026-03-21 08:25:43,979  faster_whisper       INFO     Processing audio with duration 00:01.961
+2026-03-21 08:25:46,014  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-21 08:25:55,691  faster_whisper       INFO     Processing audio with duration 00:01.361
+2026-03-21 08:26:01,384  faster_whisper       INFO     Processing audio with duration 00:01.721
+2026-03-21 08:27:46,146  faster_whisper       INFO     Processing audio with duration 00:01.601
+2026-03-21 08:27:48,422  faster_whisper       INFO     Processing audio with duration 00:01.401
+2026-03-21 08:28:01,703  faster_whisper       INFO     Processing audio with duration 00:01.481
+2026-03-21 08:28:03,625  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-21 08:28:18,546  faster_whisper       INFO     Processing audio with duration 00:02.481
+2026-03-21 08:28:20,888  faster_whisper       INFO     Processing audio with duration 00:01.581
+2026-03-21 08:28:22,677  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-21 08:28:58,526  faster_whisper       INFO     Processing audio with duration 00:02.381
+2026-03-21 08:28:59,207  faster_whisper       INFO     Processing audio with duration 00:00.681
+2026-03-21 08:28:59,905  faster_whisper       INFO     Processing audio with duration 00:00.701
+2026-03-21 08:29:00,605  faster_whisper       INFO     Processing audio with duration 00:00.701
+2026-03-21 08:29:03,171  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-21 08:29:07,996  faster_whisper       INFO     Processing audio with duration 00:02.241
+2026-03-21 08:29:09,475  faster_whisper       INFO     Processing audio with duration 00:01.481
+2026-03-21 08:29:11,220  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-21 08:29:24,399  faster_whisper       INFO     Processing audio with duration 00:02.221
+2026-03-21 08:29:24,998  faster_whisper       INFO     Processing audio with duration 00:00.601
+2026-03-21 08:29:26,838  faster_whisper       INFO     Processing audio with duration 00:01.841
+2026-03-21 08:29:28,751  httpx                INFO     HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
