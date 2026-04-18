@@ -341,4 +341,4 @@ Mission: Bring private, local-first AI to everyday users.
 
 ## License
 
-MIT License — see [LICENSE](LICENSE) for details.
+GNU GENERAL PUBLIC LICENSE V.3 — see [LICENSE](LICENSE) for details.
