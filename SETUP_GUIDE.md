@@ -1,369 +1,417 @@
-```
-╔═══════════════════════════════════════════════════════════════════════════╗
-║                                                                           ║
-║   J.A.R.V.I.S — Local Voice Assistant Setup & Troubleshooting Guide     ║
-║   Pipecat + Ollama + Whisper + Piper TTS                                 ║
-║                                                                           ║
-╚═══════════════════════════════════════════════════════════════════════════╝
+# Emily — Setup Guide
+
+Complete installation and configuration guide for Emily, the local offline AI voice agent.
+
+---
+
+## Prerequisites
+
+| Requirement | Minimum | Recommended |
+|-------------|---------|-------------|
+| **OS** | Windows 10 | Windows 11 |
+| **Python** | 3.10 | 3.12+ |
+| **RAM** | 8 GB | 16 GB+ |
+| **VRAM** | — | 6 GB+ (CUDA GPU) |
+| **Disk** | 10 GB | 30 GB (for larger models) |
+| **Microphone** | Any USB/built-in | — |
+| **Speakers** | Any | — |
+
+---
+
+## Step 1: Install Ollama
+
+Ollama runs LLMs locally on your machine.
+
+1. **Download** from [ollama.com/download](https://ollama.com/download)
+2. **Install** — run the Windows installer
+3. **Verify**:
+   ```bash
+   ollama --version
+   ```
+
+### Pull a Model
+
+```bash
+# Fast & lightweight (~4GB) — good for quick responses
+ollama pull dolphin-llama3:8b
+
+# More capable (~20GB) — recommended for best quality
+ollama pull qwen3-coder:30b
 ```
 
-## SYSTEM OVERVIEW
+> You can pull multiple models. Emily lets you choose at startup.
 
-This system provides a **fully offline, real-time voice conversation** pipeline using:
+---
 
+## Step 2: Clone & Setup Python Environment
+
+```bash
+git clone https://github.com/AiDe-HirenSumra/Local_Voice.git
+cd Local_Voice
+
+# Create virtual environment
+python -m venv .venv
+.venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
 ```
-Microphone
-    ↓ (LocalAudioTransport)
-Silero VAD (Voice Activity Detection)
-    ↓
-Faster Whisper (Speech-to-Text) 
-    ↓
-Ollama LLM (Local Language Model)
-    ↓
-Piper TTS (Text-to-Speech)
-    ↓
-Speakers
+
+### Optional: Image Generation
+
+```bash
+pip install -r image_gen_requirements.txt
+```
+
+### Optional: Faster Fuzzy Matching
+
+```bash
+pip install python-Levenshtein
 ```
 
 ---
 
-## PREREQUISITES & INSTALLATION
+## Step 3: First Run
 
-### 1. Install Ollama
-- **Download**: https://ollama.com/download
-- **Windows**: Run the installer
-- **Verify installation**:
-  ```bash
-  ollama --version
-  ```
+### Terminal 1 — Start Ollama Server
 
-### 2. Pull an Ollama Model
-```bash
-ollama pull dolphin-llama3:8b     # Fast (~4GB)
-# OR
-ollama pull qwen3-coder:30b       # More capable (~20GB)
-```
-
-### 3. Start Ollama Server
 ```bash
 ollama serve
 ```
-- The server will start at `http://localhost:11434`
-- Keep this terminal open while using the voice assistant
 
-### 4. Install Python Dependencies
-```bash
-python -m pip install -r requirements.txt
-```
+Keep this terminal open. Ollama serves at `http://localhost:11434`.
 
----
+### Terminal 2 — Start Emily
 
-## WHAT WAS FIXED
-
-### Issue 1: Unicode/Encoding Error in main.py
-**Problem**: Windows console couldn't display emojis/special characters
-**Fix**: Added UTF-8 encoding handler at startup
-```python
-if sys.platform == 'win32':
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-```
-
-### Issue 2: Deprecated Pipecat API Parameters
-**Problem**: WhisperSTTService, OLLamaLLMService, PiperTTSService had deprecated parameters
-**Fix**: Kept using working older API (newer settings-based API not available in v0.0.105)
-
-### Issue 3: Ollama Base URL Configuration
-**Problem**: OLLamaLLMService was receiving `base_url` with `/v1` appended
-**Fix**: Pass plain base_url, Pipecat handles `/v1` internally
-```python
-# WRONG
-llm = OLLamaLLMService(model=model_name, base_url=f"{OLLAMA_BASE_URL}/v1")
-
-# CORRECT
-llm = OLLamaLLMService(model=model_name, base_url=OLLAMA_BASE_URL)
-```
-
-### Issue 4: Piper TTS Model Loading
-**Problem**: TTS wasn't finding the voice model
-**Fix**: Model auto-detects from `piper_models/` directory (already present)
-
----
-
-## SYSTEM STATUS
-
-**All components verified as working:**
-
-✅ **Ollama LLM**
-- 6 models available
-- Connection successful
-- Models: dolphin-llama3:8b, qwen3-coder:30b, etc.
-
-✅ **Whisper STT**
-- Model: small.en
-- Device: CUDA (GPU accelerated)
-- Compute: float16
-- Status: Ready
-
-✅ **Piper TTS**
-- Model: en_US-amy-medium
-- Status: Loaded from local files
-- Output: Working (test tone produced sound)
-
-✅ **Audio I/O**
-- Input: Microphone Array (Realtek)
-- Output: Speakers (Realtek)
-- Both tested and working
-
-✅ **Pipecat Framework**
-- Version: 0.0.105
-- All services: Instantiation successful
-- Pipeline: Ready to run
-
----
-
-## RUNNING THE SYSTEM
-
-### Option 1: Voice Mode (Real-time Conversation)
 ```bash
 python main.py
-# Select option 1 for Voice Pipeline
-# Speak into your microphone
-# Press Ctrl+C to stop
 ```
 
-### Option 2: Text Mode (Testing without Microphone)
-```bash
-python main.py
-# Select option 2 for Text Mode
-# Type your messages
-# Commands: quit, reset, voice, switch model
+### First Run Sequence
+
+```
+1. Embedding model downloads (~1GB, BAAI/bge-m3) — one time only
+2. Mode selection: Voice Pipeline (1) or Text Mode (2)
+3. Ollama model selection: choose from pulled models
+4. Pipeline initializes (~10-30 seconds)
+5. 🎤 Ready — speak into your microphone!
 ```
 
-### Option 3: Quick Diagnostics
+---
+
+## Step 4: Verify Everything Works
+
+### Quick System Check
+
 ```bash
 python diagnostic.py
-# Tests all components independently
-# Shows detailed status of each service
 ```
 
-### Option 4: Voice Pipeline Test
+This tests:
+- ✅ Ollama connection & available models
+- ✅ Whisper STT initialization
+- ✅ Piper TTS voice model
+- ✅ Audio input/output devices
+- ✅ Memory database connection
+
+### Check Audio Devices
+
 ```bash
-python test_voice_pipeline.py
-# Direct pipeline test
-# Verifies end-to-end flow
+python check_audio.py
+```
+
+Verify your microphone is listed as the default input device.
+
+---
+
+## Configuration
+
+All settings are in [`config.py`](config.py). Here are the most important ones:
+
+### LLM Settings
+
+```python
+OLLAMA_MODEL = None                    # None = show picker, or set a specific model
+DEFAULT_OLLAMA_MODEL = "qwen3-coder:30b"  # Default selection in picker
+OLLAMA_BASE_URL = "http://localhost:11434"
+```
+
+### Whisper STT
+
+```python
+WHISPER_MODEL = "small"          # Options: tiny, base.en, small, small.en, medium, large-v3
+WHISPER_DEVICE = "cuda"          # Auto-detected: cuda (GPU) or cpu
+WHISPER_COMPUTE_TYPE = "float16" # float16 (GPU) or int8 (CPU)
+```
+
+### TTS
+
+```python
+TTS_ENGINE = "piper"             # piper (recommended), kokoro, pyttsx3, edge
+```
+
+### Memory
+
+```python
+MEMORY_ENABLED = True
+MEMORY_DB_PATH = "Conversation/memories.lance"
+MEMORY_SEARCH_LIMIT = 12        # Max memories per query
+MEMORY_SIMILARITY_THRESHOLD = 0.3
+```
+
+### Graph Visualization
+
+```python
+GRAPH_ENABLED = True
+GRAPH_DB_PATH = "Conversation/graph_memory.db"
+```
+
+### Conversation
+
+```python
+TEMPERATURE = 0.5               # 0 = focused, 1 = creative
+MAX_TOKENS = 1600               # Max response length
+MAX_CONVERSATION_HISTORY = 20   # Sliding window size
+```
+
+### Spotify (Optional)
+
+```python
+SPOTIFY_CLIENT_ID = ""          # Leave empty to disable
+SPOTIFY_CLIENT_SECRET = ""
+SPOTIFY_REDIRECT_URI = "http://localhost:8888/callback"
 ```
 
 ---
 
-## TROUBLESHOOTING
+## GPU Acceleration (Recommended)
 
-### Problem: "Ollama is not reachable"
-**Solution**:
+Emily benefits significantly from CUDA GPU acceleration:
+
+### Check CUDA
+
+```bash
+python -c "import torch; print(f'CUDA: {torch.cuda.is_available()}, Device: {torch.cuda.get_device_name(0) if torch.cuda.is_available() else \"None\"}')"
+```
+
+### Install CUDA-enabled PyTorch
+
+If CUDA is not detected:
+
+```bash
+# Uninstall CPU-only torch
+pip uninstall torch torchvision torchaudio
+
+# Install CUDA 12.1 version
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+```
+
+### What Uses GPU
+
+| Component | GPU Benefit |
+|-----------|-------------|
+| Whisper STT | **5-10x faster** transcription |
+| LLM (Ollama) | **Automatic** — Ollama uses GPU if available |
+| Embedding model | **2-3x faster** memory search |
+| Piper TTS | CPU-only (already fast) |
+
+---
+
+## Document Ingestion
+
+### Upload Documents to Memory
+
+Emily can ingest PDFs, TXT, DOCX, and MD files into her LanceDB memory:
+
+```bash
+# Ingest a PDF
+python upload_pdf.py path/to/document.pdf
+
+# Ingest a text file
+python upload_pdf.py notes.txt
+
+# List all ingested documents
+python upload_pdf.py --list
+
+# Remove a document from memory
+python upload_pdf.py --delete document.pdf
+```
+
+After ingestion, Emily can answer questions about the document content naturally:
+> "What does the report say about Q2 revenue?"
+
+---
+
+## Graph Memory
+
+Emily automatically builds a knowledge graph from conversations:
+
+```bash
+# Starts automatically with main.py
+# Or run manually:
+python graph_ui_server.py
+
+# View the graph:
+# Open http://127.0.0.1:8010 in your browser
+```
+
+### One-Time Backfill
+
+If you want to populate the graph from existing memories:
+
+```bash
+python graph_backfill.py
+```
+
+> The graph is a **read-only visualization** — it never affects Emily's responses.
+
+---
+
+## Troubleshooting
+
+### "Ollama is not reachable"
+
 ```bash
 # Start Ollama in a separate terminal
 ollama serve
 
-# Check it's running
+# Verify it's running
 curl http://localhost:11434/api/tags
+# or open http://localhost:11434 in browser
 ```
 
-### Problem: "No models found"
-**Solution**:
+### "No models found"
+
 ```bash
-# Pull a model
 ollama pull dolphin-llama3:8b
-# Wait for download to complete
-# Then run the system again
+ollama list   # verify models are available
 ```
 
-### Problem: "No audio input detected"
-**Solution**:
-- Check microphone is connected and enabled in Windows Sound Settings
-- Run diagnostic to verify: `python diagnostic.py`
-- Check audio peak level during calibration (should be > 0.01)
+### "No audio input detected"
 
-### Problem: "No audio output (no speaker sound)"
-**Solution**:
-- Check speakers are connected and not muted
-- Verify in Windows Sound Settings that output device is enabled
-- Run audio output test: `python diagnostic.py` (plays a tone)
-- Check volume levels in Windows mixer
+1. Check Windows Sound Settings → Input → Microphone is enabled
+2. Make sure mic is not muted in Windows privacy settings
+3. Run `python check_audio.py` to see detected devices
+4. Ensure no other app has exclusive mic access
 
-### Problem: "Model takes forever to load"
-**Solution**:
-- First run of Whisper/Piper downloads large models (~2GB total)
-- Subsequent runs are fast
-- Use smaller Ollama models for faster response: `ollama pull dolphin-llama3:8b`
+### "Pipeline runs but Emily doesn't respond"
 
-### Problem: "Pipeline runs but no response"
-**Check**:
-1. Ollama server is running (`ollama serve`)
-2. Model was actually pulled: `ollama list`
-3. Microphone working: `python diagnostic.py` shows peak > 0.01
-4. Speakers working: Audio test in `diagnostic.py` plays tone
-5. Whisper transcribed correctly: Look for "You said: ..." output
-6. Ollama responded: Look for latency in logs
+1. Check Ollama is running: `ollama serve`
+2. Look for `"User started speaking"` in terminal output
+3. If not appearing, microphone may be muted or VAD threshold too high
+4. Check `voice_assistant.log` for detailed error messages
 
----
+### "Slow responses"
 
-## PERFORMANCE OPTIMIZATION
+1. Use a smaller model: `ollama pull dolphin-llama3:8b`
+2. Set in config: `WHISPER_MODEL = "tiny"` (faster but less accurate)
+3. Enable GPU: verify CUDA is available
+4. Close other GPU-heavy applications
 
-### For Faster Responses
-- Use smaller Ollama model:
-  ```bash
-  ollama pull dolphin-llama3:8b    # 8B = fast, 4GB, good quality
-  ```
-- In `config.py`, set:
-  ```python
-  OLLAMA_MODEL = "dolphin-llama3:8b"
-  MAX_TOKENS = 512  # Shorter responses
-  ```
+### "Memory not recalling properly"
 
-### For Better Quality
-- Use larger Ollama model:
-  ```bash
-  ollama pull qwen3-coder:30b      # 30B = slower, 20GB, very capable
-  ```
-- Use larger Whisper model:
-  ```python
-  WHISPER_MODEL = "medium"  # More accurate but slower
-  ```
+1. Check memories exist: `python upload_pdf.py --list`
+2. Verify LanceDB: check `Conversation/memories.lance/` directory exists
+3. Lower threshold: set `MEMORY_SIMILARITY_THRESHOLD = 0.2` in config.py
+4. Increase limit: set `MEMORY_SEARCH_LIMIT = 20`
 
-### GPU Acceleration
-- Verify CUDA is available: `python -c "import torch; print(torch.cuda.is_available())"`
-- If False, install CUDA: https://developer.nvidia.com/cuda-downloads
-- Whisper will auto-use GPU if available (float16 compute)
-
----
-
-## CONFIGURATION FILES
-
-### config.py — Main Settings
-```python
-OLLAMA_MODEL = None                    # None = auto-select, or pick a model name
-DEFAULT_OLLAMA_MODEL = "dolphin-llama3:8b"
-
-WHISPER_MODEL = "small.en"            # tiny | base.en | small.en | medium
-WHISPER_DEVICE = "cuda"               # Auto-detected
-
-TTS_ENGINE = "piper"                  # piper | kokoro | pyttsx3 | edge
-
-MAX_CONVERSATION_HISTORY = 10
-TEMPERATURE = 0.8
-MAX_TOKENS = 1300
-```
-
-### Customizing Voice Models
-```python
-# In config.py, change the system prompt:
-SYSTEM_PROMPT = """You are Emily, a smart AI companion..."""
-
-# Or change TTS voice:
-TTS_SPEAKER_WAV = "voice_samples/your_voice.wav"
-```
-
----
-
-## AUDIO CALIBRATION
-
-On startup, the system auto-calibrates:
-1. Records 2 seconds of ambient noise
-2. Sets speech detection threshold
-3. Shows detected mic sample rate
-
-**Stay quiet during calibration!**
-
-If you change rooms or noise environment, restart the system to recalibrate.
-
----
-
-## FILES & STRUCTURE
-
-```
-Local_Voice/
-├── main.py                    # Main entry point (voice + text modes)
-├── diagnostic.py              # Component diagnostic tester
-├── test_voice_pipeline.py     # Direct pipeline test
-├── config.py                  # All configuration
-├── llm_handler.py            # Ollama LLM wrapper
-├── speech_to_text.py         # Whisper wrapper (legacy, not used in Pipecat)
-├── text_to_speech.py         # Piper TTS wrapper (legacy, not used in Pipecat)
-├── audio_recorder.py         # Audio recording utilities
-├── rag_engine.py             # RAG/vault system
-├── wake_word.py              # Wake word detection
-├── piper_models/             # TTS voice models
-│   ├── en_US-amy-medium.onnx
-│   └── en_US-amy-medium.onnx.json
-├── voice_samples/            # Voice reference samples
-├── requirements.txt          # Python dependencies
-└── README.md                 # Project documentation
-```
-
----
-
-## QUICK START
-
-1. **Start Ollama in one terminal**:
-   ```bash
-   ollama serve
-   ```
-
-2. **In another terminal, run the assistant**:
-   ```bash
-   python main.py
-   ```
-
-3. **Select option 1 for Voice Pipeline**
-
-4. **Speak into your microphone!**
-
-5. **Press Ctrl+C to stop**
-
----
-
-## TESTING INDIVIDUAL COMPONENTS
+### "Gesture control not working"
 
 ```bash
-# Test everything at once
-python diagnostic.py
+pip install mediapipe opencv-python pycaw screen-brightness-control
+```
 
-# Test just TTS (should play a tone)
-python -c "from text_to_speech import PiperEngine; p = PiperEngine()"
+Ensure webcam is accessible and not used by another application.
 
-# Test Whisper
-python speech_to_text.py <audio_file.wav>
+---
 
-# Test Ollama
-python -c "import ollama; c = ollama.Client(host='http://localhost:11434'); print(c.list())"
+## File Reference
+
+| File | Purpose |
+|------|---------|
+| `main.py` | Entry point — voice pipeline + text mode + all interceptors |
+| `config.py` | All configuration settings |
+| `llm_handler.py` | LLM orchestration, intent routing, response generation |
+| `intent_engine.py` | Fast keyword-based intent classifier (8 intents) |
+| `commands.py` | App/web/system command executor |
+| `custom_commands.py` | User-defined command macros |
+| `file_opener.py` | Folder browser + fuzzy file search |
+| `music_control.py` | Media key control + optional Spotify |
+| `gesture_control.py` | Hand gesture volume/brightness |
+| `image_gen.py` | AI image generation pipeline |
+| `memory_store.py` | LanceDB memory CRUD + vector search |
+| `memory_search.py` | Hybrid ranking + context injection |
+| `embedding_model.py` | Shared BGE-M3 embedding model (singleton) |
+| `rag_engine.py` | SQLite RAG knowledge vault |
+| `upload_pdf.py` | Document → LanceDB ingestion tool |
+| `graph_store.py` | SQLite graph node/edge storage |
+| `graph_extractor.py` | Entity/relationship extraction |
+| `graph_bridge.py` | Async LanceDB → graph sync |
+| `graph_backfill.py` | One-time graph population script |
+| `graph_ui_server.py` | Flask server for graph web UI |
+| `text_to_speech.py` | TTS engines for text mode |
+| `speech_to_text.py` | Whisper wrapper for text mode |
+| `audio_recorder.py` | Audio recording utilities |
+| `wake_word.py` | Wake word detection (not yet integrated) |
+| `diagnostic.py` | System diagnostic tester |
+| `check_audio.py` | Audio device listing utility |
+
+---
+
+## Requirements
+
+### Core (required)
+
+```
+pipecat-ai[local,silero,whisper]>=0.0.105
+ollama>=0.4.4
+faster-whisper>=1.2.1
+piper-tts>=1.2.0
+torch>=2.0.0
+sentence-transformers>=2.2.2
+lancedb>=0.15.0
+pyarrow>=14.0.0
+sounddevice, soundfile, numpy, colorama
+```
+
+### Automation (required)
+
+```
+pyautogui, pywin32, psutil, fuzzywuzzy, pygetwindow
+```
+
+### Optional
+
+```
+PyPDF2          — PDF ingestion
+python-docx     — DOCX ingestion
+spotipy         — Spotify integration
+opencv-python   — Gesture control
+mediapipe       — Hand tracking
+pycaw           — Volume control
+openwakeword    — Wake word detection
 ```
 
 ---
 
-## KNOWN LIMITATIONS
+## Updating
 
-1. **CPU-based Whisper**: If CUDA not available, speech recognition is slow
-2. **First model load**: Takes 10-30 seconds on first run
-3. **Internet**: System is fully offline (no cloud APIs)
-4. **Memory**: Large models (30B Ollama) need 20GB RAM + VRAM
-
----
-
-## SUPPORT
-
-**Common issues fixed in v2 (this update)**:
-- Unicode encoding errors on Windows
-- Ollama base URL configuration
-- API deprecation warnings cleaned up
-- Audio I/O verified working end-to-end
-
-**If still having issues**:
-1. Run `python diagnostic.py` to see detailed status
-2. Check `voice_assistant.log` for error messages
-3. Ensure Ollama server is running
-4. Check Windows Sound Settings for microphone/speaker
-
----
-
-Generated: 2026-03-18
-Last Updated: After comprehensive system analysis and debugging
+```bash
+cd Local_Voice
+git pull
+pip install -r requirements.txt --upgrade
+python main.py
 ```
+
+---
+
+## About
+
+**Built by [Hiren Sumra](https://github.com/AiDe-HirenSumra)**
+CEO & Co-Founder, **Liethueis Foundation**
+
+Mission: Bring private, local-first AI to everyday users.
+
+---
+
+*Last updated: April 2026*

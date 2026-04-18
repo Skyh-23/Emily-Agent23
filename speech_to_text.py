@@ -10,6 +10,7 @@ import numpy as np
 import soundfile as sf
 from faster_whisper import WhisperModel
 from config import WHISPER_MODEL, WHISPER_DEVICE, WHISPER_COMPUTE_TYPE
+from pipecat.services.whisper.stt import WhisperSTTService
 
 logger = logging.getLogger(__name__)
 

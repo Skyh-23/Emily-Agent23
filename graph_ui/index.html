@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neural Second Brain Graph</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-noise" aria-hidden="true"></div>
+    <header class="topbar">
+      <div>
+        <h1>Neural Second Brain</h1>
+        <p>2D live memory graph with connected context</p>
+      </div>
+      <div class="stats" id="stats">Loading graph...</div>
+    </header>
+
+    <main class="layout">
+      <section class="graph-shell">
+        <div class="toolbar">
+          <input id="search-input" type="text" placeholder="Search by memory ID, type, or content..." />
+          <button id="search-btn" type="button">Search</button>
+          <button id="next-btn" type="button">Next</button>
+          <button id="refresh-btn" type="button">Refresh</button>
+          <button id="fit-btn" type="button">Fit</button>
+          <button id="zoom-in-btn" type="button">Zoom In Max</button>
+          <button id="zoom-out-btn" type="button">Zoom Out Max</button>
+          <label class="toggle"><input id="night-toggle" type="checkbox" /> Night</label>
+        </div>
+        <div id="graph" role="img" aria-label="Interactive 2D graph visualization"></div>
+      </section>
+
+      <aside class="inspector" id="inspector">
+        <h2>Node Explorer</h2>
+        <p class="muted">Click a node to inspect details</p>
+        <div class="card">
+          <div><span class="label">ID:</span><span class="value" id="node-id">-</span></div>
+          <div><span class="label">Type:</span><span class="value" id="node-type">-</span></div>
+          <div><span class="label">Importance:</span><span class="value" id="node-importance">-</span></div>
+          <div><span class="label">Created:</span><span class="value" id="node-created">-</span></div>
+        </div>
+        <h3>Content</h3>
+        <pre id="node-content">No node selected.</pre>
+      </aside>
+    </main>
+
+    <footer class="footnote">
+      Manual refresh • Drag to move nodes • Scroll to zoom
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="/app.js?v=20260414b"></script>
+    <script>
+      window.__nsbBootWatchdog = setTimeout(function () {
+        if (!window.__nsbBooted) {
+          var el = document.getElementById("stats");
+          if (el) {
+            el.textContent = "UI boot failed: hard refresh (Ctrl+F5) or restart server.";
+          }
+        }
+      }, 5000);
+    </script>
+  </body>
+</html>

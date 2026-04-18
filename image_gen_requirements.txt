@@ -1,0 +1,8 @@
+# ==============================================================================
+# Image generation feature requirements (optional)
+# Install only if you want image generation:
+#   pip install -r image_gen_requirements.txt
+# ==============================================================================
+
+requests>=2.31.0
+Pillow>=10.0.0

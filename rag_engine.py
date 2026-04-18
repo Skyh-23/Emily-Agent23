@@ -11,17 +11,16 @@ import os
 import sqlite3
 import logging
 import numpy as np
-from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
-from config import EMBEDDING_MODEL, VAULT_FILE, VAULT_DB, TOP_K_RESULTS, CHUNK_SIZE_CHARS
+from config import VAULT_FILE, VAULT_DB, TOP_K_RESULTS, CHUNK_SIZE_CHARS, EMBEDDING_MODEL
+from embedding_model import get_embedding_model
 
 logger = logging.getLogger(__name__)
 
 
 class RAGEngine:
     def __init__(self):
-        print(f"🔄  Loading embedding model '{EMBEDDING_MODEL}'...")
-        self.model = SentenceTransformer(EMBEDDING_MODEL)
+        self.model = get_embedding_model()  # Shared singleton — no duplicate load
         self.vault_db = VAULT_DB
         self.vault_file = VAULT_FILE  # For migration
         self.chunks: list[str] = []
@@ -102,6 +101,38 @@ class RAGEngine:
         conn.execute("INSERT INTO vault (content) VALUES (?)", (text.strip(),))
         conn.commit()
         conn.close()
+
+        # Phase-2 NSB: best-effort graph extraction for ingested document text.
+        try:
+            from graph_extractor import extract_document_graph
+            from graph_store import upsert_node, add_edge
+
+            extracted = extract_document_graph(
+                text=text,
+                source="rag_vault",
+                metadata={"vault_db": self.vault_db},
+            )
+
+            for node in extracted.get("nodes", []):
+                upsert_node(
+                    node_id=node["id"],
+                    content=node["content"],
+                    node_type=node.get("node_type", "document"),
+                    tags=node.get("tags", []),
+                    metadata=node.get("metadata", {}),
+                    importance=node.get("importance", 1.0),
+                )
+
+            for edge in extracted.get("edges", []):
+                add_edge(
+                    source_id=edge["source_id"],
+                    target_id=edge["target_id"],
+                    relationship=edge.get("relationship", "related"),
+                    weight=edge.get("weight", 0.5),
+                    metadata=edge.get("metadata", {}),
+                )
+        except Exception as e:
+            logger.warning("Graph extract skipped for RAG insert: %s", e)
 
         print(f'📝  Inserted into vault: "{text[:80]}..."')
         logger.info("Inserted into vault: %d chars", len(text))
